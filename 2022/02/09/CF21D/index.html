@@ -28,7 +28,7 @@
 <meta property="og:description" content="题意给定 $n$ 个点 $m$ 条边的无向图 求从 $1$ 点开始经过每条边至少一次最后回到 $1$ 点的最小路程 显然就是找一条路径可重复的欧拉回路 思路首先对于欧拉回路的结论是：所有点的度数都为偶数 因为所有边至少经过一次，那么可以把题意转换成加最少多少条边使得图满足以上结论 而加的边目的是为了把奇度数转成偶度数，先 floyd 一下得到任意点间加边的最小花费 $dp[i]$ 表示状态i下度">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-09T05:12:13.186Z">
-<meta property="article:modified_time" content="2022-02-09T05:26:52.254Z">
+<meta property="article:modified_time" content="2022-02-09T05:40:29.143Z">
 <meta property="article:author" content="Pioneer Xu">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-02-09 13:12:13 / Modified: 13:26:52" itemprop="dateCreated datePublished" datetime="2022-02-09T13:12:13+08:00">2022-02-09</time>
+              <time title="Created: 2022-02-09 13:12:13 / Modified: 13:40:29" itemprop="dateCreated datePublished" datetime="2022-02-09T13:12:13+08:00">2022-02-09</time>
             </span>
 
           
