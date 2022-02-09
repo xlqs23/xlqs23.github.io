@@ -21,18 +21,18 @@
   </script>
 
   <meta name="description" content="题意已知$n$个可走距离，和$x$，问牛从$(0,0)$到$(x,0)$最少需要走多少步?牛可以这样直走，可以斜着走，每个可走距离可以用无限次。 思路设某个可走距离为k，走的步数一共就三个情况。  一次到达，满足 $k&#x3D;x$  两次到达，满足 $k&gt;x$ ;(由勾股定理得，两个最小边之和大于第三边，则两次肯定是能到达的)。  多次到达，$k&lt;x$ ;(我们只需用最大可走距离">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="CF1307B">
-<meta property="og:url" content="http://example.com/CF1307B.html">
+<meta property="og:url" content="http://example.com/2022/02/09/CF1307B/index.html">
 <meta property="og:site_name" content="The OI Blog of xlqs23">
 <meta property="og:description" content="题意已知$n$个可走距离，和$x$，问牛从$(0,0)$到$(x,0)$最少需要走多少步?牛可以这样直走，可以斜着走，每个可走距离可以用无限次。 思路设某个可走距离为k，走的步数一共就三个情况。  一次到达，满足 $k&#x3D;x$  两次到达，满足 $k&gt;x$ ;(由勾股定理得，两个最小边之和大于第三边，则两次肯定是能到达的)。  多次到达，$k&lt;x$ ;(我们只需用最大可走距离">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-09T05:14:37.717Z">
+<meta property="article:published_time" content="2022-02-09T05:12:06.686Z">
 <meta property="article:modified_time" content="2022-02-09T05:14:37.717Z">
 <meta property="article:author" content="Pioneer Xu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/CF1307B">
+<link rel="canonical" href="http://example.com/2022/02/09/CF1307B/">
 
 
 <script id="page-configurations">
@@ -40,13 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>CF1307B | The OI Blog of xlqs23
-</title>
+  <title>CF1307B | The OI Blog of xlqs23</title>
   
 
 
@@ -143,33 +142,53 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">CF1307B
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/09/CF1307B/">
 
-</div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pioneer Xu">
+      <meta itemprop="description" content="">
+    </span>
 
-</header>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="The OI Blog of xlqs23">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CF1307B
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-02-09 13:12:06 / Modified: 13:14:37" itemprop="dateCreated datePublished" datetime="2022-02-09T13:12:06+08:00">2022-02-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>已知$n$个可走距离，和$x$，问牛从$(0,0)$到$(x,0)$最少需要走多少步?牛可以这样直走，可以斜着走，每个可走距离可以用无限次。</p>
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>已知$n$个可走距离，和$x$，问牛从$(0,0)$到$(x,0)$最少需要走多少步?牛可以这样直走，可以斜着走，每个可走距离可以用无限次。</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>设某个可走距离为k，走的步数一共就三个情况。</p>
 <ol>
 <li><p>一次到达，满足 $k&#x3D;x$</p>
@@ -182,16 +201,35 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">12</span></span><br><span class="line"><span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
 <p>这就是多次到达的问题，$ceil(12&#x2F;5)&#x3D;3$ ,也就是牛走了三次5.可以这样来分析，先让牛走直线，还剩7的距离，两个5走一个三角形的两边。</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;t);</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> n,k,x,mx=<span class="number">0</span>;</span><br><span class="line">		<span class="type">bool</span> flag=<span class="literal">false</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;x);</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k);</span><br><span class="line">			<span class="keyword">if</span>(k==x)	flag=<span class="literal">true</span>;</span><br><span class="line">			mx=<span class="built_in">max</span>(mx,k);</span><br><span class="line">		&#125;	</span><br><span class="line">		<span class="keyword">if</span>(flag)	<span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="built_in">max</span>(<span class="number">2</span>,(mx+x<span class="number">-1</span>)/mx));<span class="comment">//向下取整 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/09/HTR003D/" rel="prev" title="HTR003D">
+      <i class="fa fa-chevron-left"></i> HTR003D
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/02/09/CF21D/" rel="next" title="CF21D">
+      CF21D <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -253,6 +291,13 @@
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
   </nav>
 </div>
 
