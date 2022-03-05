@@ -110,4 +110,41 @@
         <tag>题解</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Maths-SeniorHighScool-One</title>
+    <url>/2022/03/05/MathsSeniorhigh1/</url>
+    <content><![CDATA[<p>这次，我们来说说集合。首先，从康托尔（Cantor）说起。</p>
+<p>康托尔是发明集合论的人，这个人首先发表说：“一些对象组成的总体叫集合！”然后就被著名的数学怼人专家数学界的蔡明罗素给怼了。他说：“是什么东西都能叫集合吗？”</p>
+<p>来来来，我们举个栗子。比如，今天张三去军训，老师让高的人去举军旗。张三1米7，身边全是1米6的李四，他去举军旗了。王五1米9，身旁有个姚明，姚明去举了。为什么一个1米7的上了，1米9的就没上呢？主要是因为<strong>集合有确定性</strong>。</p>
+<p>于是康托尔说：“一些确定的对象的总体叫集合！”然后，又被怼了。罗素说，“我这里有一堆数，$ \left\{1,2,1\right\} $，你说算集合吗？”康托尔要被气死了。这就是<strong>集合的互异性</strong>。</p>
+<p>所以我们有了集合的标准定义：<strong>一些确定的不同的对象组成的总体叫集合</strong>。</p>
+<p>除了确定性和互异性，集合还有无序性。比如《西游记》中“孙行者”“者行孙”“行者孙”这都是一个集合，金角银角败在了集合的无序性面前。</p>
+<p>组成集合的对象叫元素，如果元素 $a$ 在集合 $A$ 中，我们就称元素 $a$ 属于集合 $A$ ，写作 $a\in A$ ；若果元素 $a$ 不在集合 $A$ 中，我们就称元素 $a$ 不属于集合 $A$，写作 $a\notin A$ 。</p>
+<p>现在来看看几个<strong>常见的数集</strong>。</p>
+<p>自然数集 $\mathbb{N}$ ，整数集 $\mathbb{Z}$ ，有理数集 $\mathbb{Q}$ ，实数集 $\mathbb{R}$ ，复数集 $\mathbb{C}$ </p>
+<p>设定一个数集 $A$ ，$A^+$ 或 $A_+$ 表示 $A$ 中正的数，$A^-$ 或 $A_-$     表示AA中负的数，$A^*$ 表示 $A$ 中非零的数。</p>
+<p>下面我们来看看怎么表示一个集合，拿集合 $A$ 来说吧，假定它是正整数集。。</p>
+<p><strong>1.列举法</strong></p>
+<script type="math/tex; mode=display">A=\{1,2,3\cdots\}</script><p><strong>2.描述法</strong></p>
+<script type="math/tex; mode=display">A=\{x|x\in\mathbb{Z}^+\}</script><p><strong>3.区间</strong></p>
+<p>区间这个东西我们就不用正整数集了，我们多举几个例子。</p>
+<p>①开区间： $\{x|1&lt;x&lt;3\}=(1,3)$ </p>
+<p>②闭区间： $\{x|1\leq x\leq3\}=[1,3]$</p>
+<p>③左开右闭区间： $\{x|1&lt;x\leq 3\}=(1,3]$</p>
+<p>左闭右开区间以此类推</p>
+<p>另外还有两个<strong>特殊的例子</strong></p>
+<script type="math/tex; mode=display">\{x∣x>1\}=(1,+\infty)</script><script type="math/tex; mode=display">\{x|x<1\}=(-\infty,1)</script><p><strong>4.图象</strong><br>那么我们可以写个 $a,b$ ，然后在外面画的圈，最后写上 $=\{a,b\}$ 。</p>
+<p>下面来说说<strong>集合与集合之间的关系</strong>。</p>
+<p>首先是相等 : $A=B$，$\forall x\in A \Rrightarrow x\in B$</p>
+<p>然后是包含 : $\{1,2\}\subseteq\{1,2,3\}$，$\{1\}\nsubseteq\varnothing$，$\varnothing\subseteq A(\forall A)$，$\varnothing\subseteq\varnothing$</p>
+<p>在包含里面还有一个定义叫真包含 :<br>$\{1,2\}\subsetneqq\{1,2,3\}$,$\{1,2\}\not\subsetneqq\{1,2\}$</p>
+<p><strong>1.并集</strong>：$A\cup B=\{x|x\in A$或$x\in B\}$</p>
+<p><strong>2.交集</strong>：$A\cap B=\{x|x\in A$且$x\in B\}$</p>
+<p><strong>3.补集</strong>：$\complement_UA=\{x|x\notin A,x\in U\}$</p>
+<p>好，我们今天就聊到这里。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
 </search>
