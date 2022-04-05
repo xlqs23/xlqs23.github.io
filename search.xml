@@ -182,7 +182,15 @@
     <title>每日抱蛋小技巧</title>
     <url>/2022/04/05/skills/</url>
     <content><![CDATA[<ol>
-<li>范围中左右 $( \leq , )$ </li>
+<li>范围中左右 $( \leq , \ge)$ 未详细考虑.</li>
+<li>实际问题或特殊题目中函数未写自变量取值范围.</li>
+<li>考试不死算，抱蛋两行泪. (PS. CPhO 又称全国微积分大赛，为了和 XXY 一起去 THU ，算啊！)</li>
+<li>例如 $$\begin{Bmatrix}{x}&amp;{m+1}\\{x}&amp;{x-1}\end{Bmatrix}$ 应为 $(x+m+1)(x+m-1) = 0$.</li>
+<li>注意二次函数中 $a,b,c$ 等参数前的符号.</li>
+<li>算概率没看清楚是那个球.</li>
+<li>有等边不会，未考虑再造一个.</li>
+<li>弦切角定理可以不是直径（《平》习题4.1 ）.</li>
+<li>二元一次方程两解是否为同一数.</li>
 </ol>
 ]]></content>
       <tags>
