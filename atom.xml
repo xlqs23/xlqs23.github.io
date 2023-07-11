@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xlqs23.github.io</id>
     <title>xlqs&apos;s 的小窝</title>
-    <updated>2023-07-11T12:26:48.646Z</updated>
+    <updated>2023-07-11T12:32:03.099Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xlqs23.github.io"/>
     <link rel="self" href="https://xlqs23.github.io/atom.xml"/>
@@ -10,4 +10,103 @@
     <logo>https://xlqs23.github.io/images/avatar.png</logo>
     <icon>https://xlqs23.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, xlqs&apos;s 的小窝</rights>
+    <entry>
+        <title type="html"><![CDATA[CSP-S / NOIP 2022游记暨退役记]]></title>
+        <id>https://xlqs23.github.io/post/csp-s-noip-2022-you-ji-ji-tui-yi-ji/</id>
+        <link href="https://xlqs23.github.io/post/csp-s-noip-2022-you-ji-ji-tui-yi-ji/">
+        </link>
+        <updated>2023-07-11T12:31:32.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSP2021 游记 ]]></title>
+        <id>https://xlqs23.github.io/post/csp2021-you-ji/</id>
+        <link href="https://xlqs23.github.io/post/csp2021-you-ji/">
+        </link>
+        <updated>2023-07-11T12:30:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSP2020 游记]]></title>
+        <id>https://xlqs23.github.io/post/csp2020-you-ji/</id>
+        <link href="https://xlqs23.github.io/post/csp2020-you-ji/">
+        </link>
+        <updated>2023-07-11T12:30:06.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="day-infty">Day - <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">∞</span></span></span></span></h3>
+<h4 id="初赛日">初赛日</h4>
+<p>看见上午的试题<strong>一脸自闭</strong> (位运算我不会呀。<strong>Begin to sleep.</strong></p>
+<p>下午。<s>好简单啊，哈哈哈哈！</s><strong>（疯了</strong></p>
+<p>最后</p>
+<p><strong>TG 50.5  points</strong></p>
+<p><strong>PJ 76.5  points</strong></p>
+<h3 id="day-infty-1">Day - <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\infty + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">∞</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></h3>
+<p>月考</p>
+<p>作为文化课选手，我相当自信，坦然走上考场.</p>
+<p>一看题目，WOC 我怎么都不会（划掉</p>
+<h3 id="day-1">Day -1</h3>
+<p>被数学老师当场侮辱，我火了，随手写出一道<strong>数学题（OI数学题）</strong>，数学老师当场傻眼，只好让我坐下。<strong><s>（原来学OI还有让数学老师闭嘴的功能）</s></strong></p>
+<p>随后滚去了Nanjing。</p>
+<p>背了高精和背包的板子。</p>
+<p>希望今天背的明天都不要考到。</p>
+<h3 id="day1">Day1</h3>
+<p>第一次参加线下 OI 比赛，不免有些激动。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>:</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">7:50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span></span></span></span> 到考场，发现大家都到了，我已经是最后几个了（</p>
+<p>细心点。rp++。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>00</mn></mrow><annotation encoding="application/x-tex">8:00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span></span></span></span> 被一个老师像赶牛一样赶到了考场。</p>
+<p>机器是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi><mi>i</mi><mi>n</mi><mn>7</mn></mrow><annotation encoding="application/x-tex">win7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord">7</span></span></span></span> 的，配有<strong>虚拟机</strong>，还有教程。<strong>好评！</strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">8:30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span> 时间到了，但是老师说密码没来，让我们耐心等候。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">8:32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 密码来了，但是没人能解压，老师说他们来解压，让我们耐心等候。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">8:40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span> 解压完的文件来了，开题。</p>
+<h3 id="t1">T1:</h3>
+<p>不会！</p>
+<h3 id="t2">T2:</h3>
+<p>什么鬼？</p>
+<h3 id="t3">T3:</h3>
+<p>语文题？</p>
+<h3 id="t4">T4:</h3>
+<p>眼熟？</p>
+<p>自闭了一阵，开始干 T1。 2 min 搞定。</p>
+<p>T2 似乎只要 sort 就可以了（大雾</p>
+<p>T3 栈模拟，可是我不会啊，啊啊啊啊阿！！！打了自己认为能拿分的做法。</p>
+<p>T4 一眼的 DP ，决定先打暴力。</p>
+<p>随后check了一下 T1 和 T2 , $ n &lt; = 50000 $ ？！！！</p>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="day-infty">Day - <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">∞</span></span></span></span></h3>
+<h4 id="初赛日">初赛日</h4>
+<p>看见上午的试题<strong>一脸自闭</strong> (位运算我不会呀。<strong>Begin to sleep.</strong></p>
+<p>下午。<s>好简单啊，哈哈哈哈！</s><strong>（疯了</strong></p>
+<p>最后</p>
+<p><strong>TG 50.5  points</strong></p>
+<p><strong>PJ 76.5  points</strong></p>
+<h3 id="day-infty-1">Day - <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\infty + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">∞</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></h3>
+<p>月考</p>
+<p>作为文化课选手，我相当自信，坦然走上考场.</p>
+<p>一看题目，WOC 我怎么都不会（划掉</p>
+<h3 id="day-1">Day -1</h3>
+<p>被数学老师当场侮辱，我火了，随手写出一道<strong>数学题（OI数学题）</strong>，数学老师当场傻眼，只好让我坐下。<strong><s>（原来学OI还有让数学老师闭嘴的功能）</s></strong></p>
+<p>随后滚去了Nanjing。</p>
+<p>背了高精和背包的板子。</p>
+<p>希望今天背的明天都不要考到。</p>
+<h3 id="day1">Day1</h3>
+<p>第一次参加线下 OI 比赛，不免有些激动。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>:</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">7:50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span></span></span></span> 到考场，发现大家都到了，我已经是最后几个了（</p>
+<p>细心点。rp++。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>00</mn></mrow><annotation encoding="application/x-tex">8:00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span></span></span></span> 被一个老师像赶牛一样赶到了考场。</p>
+<p>机器是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi><mi>i</mi><mi>n</mi><mn>7</mn></mrow><annotation encoding="application/x-tex">win7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord">7</span></span></span></span> 的，配有<strong>虚拟机</strong>，还有教程。<strong>好评！</strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">8:30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span> 时间到了，但是老师说密码没来，让我们耐心等候。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">8:32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 密码来了，但是没人能解压，老师说他们来解压，让我们耐心等候。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn><mo>:</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">8:40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span> 解压完的文件来了，开题。</p>
+<h3 id="t1">T1:</h3>
+<p>不会！</p>
+<h3 id="t2">T2:</h3>
+<p>什么鬼？</p>
+<h3 id="t3">T3:</h3>
+<p>语文题？</p>
+<h3 id="t4">T4:</h3>
+<p>眼熟？</p>
+<p>自闭了一阵，开始干 T1。 2 min 搞定。</p>
+<p>T2 似乎只要 sort 就可以了（大雾</p>
+<p>T3 栈模拟，可是我不会啊，啊啊啊啊阿！！！打了自己认为能拿分的做法。</p>
+<p>T4 一眼的 DP ，决定先打暴力。</p>
+<p>随后check了一下 T1 和 T2 , $ n &lt; = 50000 $ ？！！！</p>
+]]></content>
+    </entry>
 </feed>
