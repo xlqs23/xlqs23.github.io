@@ -23,7 +23,7 @@ blog_url: "/blog/"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: ""
+  avatar: "/images/uploads/1795530294033-0251e53d9c.png"
   name: Liuqingshan Xu
   pronouns: # example: "she/her"  
   bio: ACMer / Devoted in AI4S
