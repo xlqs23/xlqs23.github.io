@@ -1,0 +1,50 @@
+{%- assign profile_author = include.author -%}
+{%- assign avatar = profile_author.avatar | strip -%}
+{%- assign name = profile_author.name | strip -%}
+{%- assign pronouns = profile_author.pronouns | strip -%}
+{%- assign affiliation = profile_author.employer | strip -%}
+{%- assign bio = profile_author.bio | strip -%}
+{%- assign location = profile_author.location | strip -%}
+{%- assign email = profile_author.email | strip -%}
+{%- assign github = profile_author.github | strip -%}
+{%- assign scholar = profile_author.googlescholar | strip -%}
+{%- assign website = profile_author.uri | strip -%}
+{%- assign orcid = profile_author.orcid | strip -%}
+{%- assign identity = name | append: pronouns | append: affiliation | append: bio -%}
+{%- assign contacts = location | append: email | append: github | append: scholar | append: website | append: orcid -%}
+{%- assign profile = avatar | append: identity | append: contacts -%}
+{%- if profile != empty -%}
+  <div class="academic-profile">
+    {% if avatar != empty or identity != empty %}
+      <div class="academic-profile__header">
+        {% if avatar != empty %}
+          {% assign avatar_prefix = avatar | slice: 0, 1 %}
+          {% unless avatar contains '://' or avatar_prefix == '/' %}
+            {% assign avatar = avatar | prepend: '/images/' %}
+          {% endunless %}
+          <img class="academic-profile__avatar" src="{{ avatar | escape }}" alt="{{ name | escape }}" width="175" height="175">
+        {% endif %}
+        {% if identity != empty %}
+          <div class="academic-profile__identity">
+            {% if name != empty %}
+              {% if include.home %}<h1 class="academic-profile__name">{{ name | escape }}</h1>{% else %}<h3 class="academic-profile__name">{{ name | escape }}</h3>{% endif %}
+            {% endif %}
+            {% if pronouns != empty %}<p class="academic-profile__pronouns">{{ pronouns | escape }}</p>{% endif %}
+            {% if affiliation != empty %}<p class="academic-profile__affiliation">{{ affiliation | escape }}</p>{% endif %}
+            {% if bio != empty %}<p class="academic-profile__bio">{{ bio | escape }}</p>{% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if contacts != empty %}
+      <ul class="academic-profile__links">
+        {% if location != empty %}<li><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i><span>{{ location | escape }}</span></li>{% endif %}
+        {% if email != empty %}<li><a href="mailto:{{ email | escape }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span>Email</span></a></li>{% endif %}
+        {% if github != empty %}<li><a href="https://github.com/{{ github | url_encode }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>{% endif %}
+        {% if scholar != empty %}<li><a href="{{ scholar | escape }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li>{% endif %}
+        {% if website != empty %}<li><a href="{{ website | escape }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span>Website</span></a></li>{% endif %}
+        {% if orcid != empty %}<li><a href="{{ orcid | escape }}"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i><span>ORCID</span></a></li>{% endif %}
+      </ul>
+    {% endif %}
+  </div>
+{%- endif -%}

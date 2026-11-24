@@ -2,17 +2,8 @@
 layout: default
 ---
 
-{% assign author = site.author %}
-{% assign avatar = author.avatar | strip %}
-{% assign name = author.name | strip %}
-{% assign affiliation = author.employer | strip %}
-{% assign bio = author.bio | strip %}
-{% assign location = author.location | strip %}
-{% assign email = author.email | strip %}
-{% assign github = author.github | strip %}
-{% assign scholar = author.googlescholar | strip %}
-{% assign contacts = location | append: email | append: github | append: scholar %}
-{% assign profile = avatar | append: name | append: affiliation | append: bio | append: contacts %}
+{% capture profile %}{% include academic-profile.html author=site.author home=true %}{% endcapture %}
+{% assign profile = profile | strip %}
 
 {% capture main_content %}
   {% capture about_visible %}{% include home-section-visible.html section='about' about=content %}{% endcapture %}
@@ -39,21 +30,23 @@ layout: default
           {% assign entry_date = entry.date | strip %}
           {% assign entry_url = entry.url | strip %}
           {% assign entry_detail = entry.detail | strip %}
-          <li class="academic-entry{% if entry_image != empty %} academic-entry--image{% endif %}">
+          <li class="academic-entry{% if entry_image != empty %} academic-entry--image{% if link.section == 'publications' %} academic-entry--publication-image{% endif %}{% endif %}">
             {% if entry_image != empty %}
-              <div class="academic-entry__figure">
-                {% if link.section == 'publications' and entry_label != empty %}<span class="academic-entry__ribbon">{{ entry_label | escape }}</span>{% endif %}
-                <img src="{{ entry_image | escape }}" alt="" loading="lazy">
-              </div>
+              {% if link.section == 'publications' %}
+                <div class="academic-entry__publication-figure">
+                  <img src="{{ entry_image | escape }}" alt="" width="240" loading="lazy">
+                  {% if entry_label != empty %}<span class="academic-entry__ribbon">{{ entry_label | escape }}</span>{% endif %}
+                </div>
+              {% else %}
+                <img class="academic-entry__figure" src="{{ entry_image | escape }}" alt="" width="60" height="60" loading="lazy">
+              {% endif %}
             {% endif %}
             <div class="academic-entry__body">
               <div class="academic-entry__heading">
-                {% if link.section == 'news' and entry_date != empty %}<em class="academic-entry__date">{{ entry_date | escape }}:</em>{% endif %}
+                {% if link.section == 'news' and entry_image == empty and entry_date != empty %}<em class="academic-entry__date">{{ entry_date | escape }}:</em>{% endif %}
                 <h3>{% if entry_url != empty %}<a href="{{ entry_url | escape }}">{{ entry_title | escape }}</a>{% else %}{{ entry_title | escape }}{% endif %}</h3>
-                {% if link.section != 'news' and entry_date != empty %}<span class="academic-entry__date">{{ entry_date | escape }}</span>{% endif %}
-                {% if entry_label != empty %}
-                  {% unless link.section == 'publications' and entry_image != empty %}<span class="academic-entry__label">{{ entry_label | escape }}</span>{% endunless %}
-                {% endif %}
+                {% if entry_date != empty %}{% if link.section != 'news' or entry_image != empty %}<span class="academic-entry__date">{{ entry_date | escape }}</span>{% endif %}{% endif %}
+                {% if entry_label != empty %}{% unless link.section == 'publications' and entry_image != empty %}<span class="academic-entry__label">{{ entry_label | escape }}</span>{% endunless %}{% endif %}
               </div>
               {% if entry_detail != empty %}<div class="academic-entry__detail">{{ entry_detail | markdownify }}</div>{% endif %}
             </div>
@@ -67,31 +60,8 @@ layout: default
 
 <main class="academic-home{% if profile != empty and main_content != empty %} academic-home--columns{% endif %}" id="main">
   {% if profile != empty %}
-    <aside class="academic-profile" aria-label="Profile">
-      <div class="academic-profile__header">
-        {% if avatar != empty %}
-          {% assign avatar_prefix = avatar | slice: 0, 1 %}
-          {% unless avatar contains '://' or avatar_prefix == '/' %}
-            {% assign avatar = avatar | prepend: '/images/' %}
-          {% endunless %}
-          <img class="academic-profile__avatar" src="{{ avatar | escape }}" alt="{% if name != empty %}{{ name | escape }}{% endif %}" width="175" height="175">
-        {% endif %}
-        {% if name != empty or affiliation != empty or bio != empty %}
-          <div class="academic-profile__identity">
-            {% if name != empty %}<h1>{{ name | escape }}</h1>{% endif %}
-            {% if affiliation != empty %}<p class="academic-profile__affiliation">{{ affiliation | escape }}</p>{% endif %}
-            {% if bio != empty %}<p class="academic-profile__bio">{{ bio | escape }}</p>{% endif %}
-          </div>
-        {% endif %}
-      </div>
-      {% if contacts != empty %}
-        <ul class="academic-profile__links">
-          {% if location != empty %}<li><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>{{ location | escape }}</li>{% endif %}
-          {% if email != empty %}<li><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><a href="mailto:{{ email | escape }}">{{ email | escape }}</a></li>{% endif %}
-          {% if github != empty %}<li><i class="fab fa-fw fa-github" aria-hidden="true"></i><a href="https://github.com/{{ github | url_encode }}">GitHub</a></li>{% endif %}
-          {% if scholar != empty %}<li><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><a href="{{ scholar | escape }}">Google Scholar</a></li>{% endif %}
-        </ul>
-      {% endif %}
+    <aside class="academic-home__profile" aria-label="Profile">
+      {{ profile }}
     </aside>
   {% endif %}
 
