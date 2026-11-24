@@ -1,7 +1,10 @@
-# Items use title, date, detail, url, image and label; only title is required.
 news: []
 experience: []
 publications: []
 grants: []
-education: []
+education:
+  - title: Shandong Unversity
+    date: 2025.9 -
+    detail: Major in Computer Science and study Phyisics in the first year.
+    image: /images/uploads/1795530721925-d5331c5723.png
 teaching: []
