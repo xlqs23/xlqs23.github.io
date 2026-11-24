@@ -1,34 +1,45 @@
-name: Jekyll build
+name: Deploy homepage to GitHub Pages
 
 on:
-  # Run after bad-pr check
-  workflow_run:
-    workflows: ["Cleanup bad PR"]
-    branches: [main]
-    types:
-      - completed
-      
+  push:
+    branches: [master]
+  workflow_dispatch:
+
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: jekyll-build-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          ruby-version: "3.2"
+          node-version: 24
+      - run: npm ci
+      - run: npm run build:js
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
           bundler-cache: true
-
-      - name: Build site
-        run: bundle exec jekyll build --strict_front_matter
+      - uses: actions/configure-pages@v6
+        id: pages
+      - run: bundle exec jekyll build --strict_front_matter --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - uses: actions/upload-pages-artifact@v5
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5
+        id: deploy

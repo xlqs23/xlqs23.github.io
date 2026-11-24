@@ -37,3 +37,46 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+.profile-home {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 10vw, 7rem) 1.5rem 3rem;
+}
+
+.profile-home__header {
+  margin-bottom: 2.5rem;
+}
+
+.profile-home__header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  letter-spacing: -.035em;
+}
+
+.profile-home__avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-home__bio {
+  max-width: 62ch;
+  font-size: 1.15rem;
+}
+
+.profile-home__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  list-style: none;
+}
+
+.profile-home__body {
+  max-width: 68ch;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--global-border-color);
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% assign author = site.author %}
+<main class="profile-home" id="main" role="main">
+  <header class="profile-home__header">
+    {% if author.avatar and author.avatar != empty %}
+      {% if author.avatar contains '://' or author.avatar contains '/images/' %}
+        {% assign avatar_url = author.avatar %}
+      {% else %}
+        {% assign avatar_url = author.avatar | prepend: '/images/' %}
+      {% endif %}
+      <img class="profile-home__avatar" src="{{ avatar_url | escape }}" alt="{{ author.name | escape }}" width="96" height="96">
+    {% endif %}
+    <h1>{{ author.name | default: page.title | escape }}</h1>
+    {% if author.bio and author.bio != empty %}<p class="profile-home__bio">{{ author.bio | escape }}</p>{% endif %}
+    {% if author.employer or author.location or author.email or author.github %}
+      <ul class="profile-home__details">
+        {% if author.employer and author.employer != empty %}<li>{{ author.employer | escape }}</li>{% endif %}
+        {% if author.location and author.location != empty %}<li>{{ author.location | escape }}</li>{% endif %}
+        {% if author.email and author.email != empty %}<li><a href="mailto:{{ author.email | escape }}">{{ author.email | escape }}</a></li>{% endif %}
+        {% if author.github and author.github != empty %}<li><a href="https://github.com/{{ author.github | escape }}">GitHub</a></li>{% endif %}
+      </ul>
+    {% endif %}
+    <a class="btn btn--primary" href="{{ site.blog_url | default: '/blog/' | escape }}">访问博客</a>
+  </header>
+  {% assign about = content | strip %}
+  {% unless about == empty %}
+    <section class="profile-home__body" aria-label="个人介绍">{{ content }}</section>
+  {% endunless %}
+</main>
