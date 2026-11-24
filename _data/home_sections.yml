@@ -5,11 +5,13 @@ grants: []
 education:
   - title: Shandong Unversity
     date: 2025.9 -
-    detail: Major in Computer Science and study Phyisics in the first year.
+    detail: Major in Computer Science and Study Phyisics in the First year.
+    url: https://www.sdu.edu.cn/
     image: /images/uploads/1795530721925-d5331c5723.png
   - title: Haian Senior High School of Jiangsu Province
     date: 2022.9 - 2025.6
     detail: OI Group
+    url: http://www.hazx.org.cn/
     image: /images/uploads/1795535348232-ad7b27b8c4.webp
 awards:
   - title: CSP-J 2020/2021 - Second Prize
@@ -20,4 +22,6 @@ awards:
     date: "2023"
   - title: 51st ICPC Regional Contest - Bronze Prize
     date: "2026.11"
+  - title: ASC26 - Second Prize
+    date: "2026.1"
 teaching: []
