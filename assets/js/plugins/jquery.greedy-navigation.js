@@ -39,8 +39,8 @@ function updateNav() {
     // There is space for another item in the nav
     while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
       // Move the item to the visible list
-      if ($vlinks_persist_tail.children().length > 0) {
-        $hlinks.children().first().insertBefore($vlinks_persist_tail);
+      if ($vlinks_persist_tail.length > 0) {
+        $hlinks.children().first().insertBefore($vlinks_persist_tail.first());
       } else {
         $hlinks.children().first().appendTo($vlinks);
       }
@@ -51,6 +51,7 @@ function updateNav() {
     if (breaks.length < 1) {
       $btn.addClass('hidden');
       $btn.removeClass('close');
+      $btn.attr('aria-expanded', 'false');
       $hlinks.addClass('hidden');
     }
   }
@@ -60,7 +61,7 @@ function updateNav() {
 
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
-  $('body').css('padding-top', mastheadHeight + 'px');
+  $('body:not(.academic-site)').css('padding-top', mastheadHeight + 'px');
   if ($(".author__urls-wrapper button").is(":visible")) {
     $(".sidebar").css("padding-top", "");
   } else {
@@ -74,18 +75,20 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation) {
+  screen.orientation.addEventListener('change', updateNav);
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  $(this).attr('aria-expanded', !$hlinks.hasClass('hidden'));
 });
 
 $hlinks.on('click', 'a', function () {
   $hlinks.addClass('hidden');
   $btn.removeClass('close');
+  $btn.attr('aria-expanded', 'false');
 });
 
 updateNav();

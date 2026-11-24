@@ -1,0 +1,9 @@
+{%- if include.section == 'about' -%}
+  {%- assign about_text = include.about | strip -%}
+  {%- if about_text != empty -%}yes{%- endif -%}
+{%- else -%}
+  {%- for section_entry in site.data.home_sections[include.section] -%}
+    {%- assign entry_title = section_entry.title | strip -%}
+    {%- if entry_title != empty -%}yes{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
