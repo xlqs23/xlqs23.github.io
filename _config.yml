@@ -29,7 +29,7 @@ author:
   bio: ACMer / Devoted in AI4S
   location: Weihai，China
   employer: Shandong University
-  uri: # URL
+  uri: "" # URL
   email: xlqs23@mail.sdu.edu.cn
 
   # Academic websites
@@ -38,7 +38,7 @@ author:
   googlescholar: ""
   inspire-hep: # URL
   impactstory: # URL
-  orcid:
+  orcid: https://orcid.org/my-orcid?orcid=0009-0000-1124-7656
   semantic: # URL
   ssrn: # URL
   pubmed:
