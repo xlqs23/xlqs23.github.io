@@ -22,7 +22,7 @@ main:
     url: /#education
     section: education
     icon: "📖"
-  - title: 获奖经历
+  - title: Prize
     url: /#awards
     section: awards
     icon: "🏆"
