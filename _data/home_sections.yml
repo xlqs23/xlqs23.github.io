@@ -11,5 +11,13 @@ education:
     date: 2022.9 - 2025.6
     detail: OI Group
     image: /images/uploads/1795535348232-ad7b27b8c4.webp
-awards: []
+awards:
+  - title: CSP-J 2020/2021 - Second Prize
+    date: 2020/2021
+  - title: CSP-J 2021/2022/2023 - Second Prize
+    date: 2021/2022/2023
+  - title: NOIP2023 - Second Prize
+    date: "2023"
+  - title: 51st ICPC Regional Contest - Bronze Prize
+    date: "2026.11"
 teaching: []
