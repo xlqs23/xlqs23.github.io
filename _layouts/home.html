@@ -3,30 +3,72 @@ layout: default
 ---
 
 {% assign author = site.author %}
-<main class="profile-home" id="main" role="main">
-  <header class="profile-home__header">
-    {% if author.avatar and author.avatar != empty %}
-      {% if author.avatar contains '://' or author.avatar contains '/images/' %}
-        {% assign avatar_url = author.avatar %}
-      {% else %}
-        {% assign avatar_url = author.avatar | prepend: '/images/' %}
-      {% endif %}
-      <img class="profile-home__avatar" src="{{ avatar_url | escape }}" alt="{{ author.name | escape }}" width="96" height="96">
+<main class="academic-home" id="main">
+  <aside class="academic-profile" aria-label="Profile">
+    {% assign avatar = author.avatar | strip %}
+    {% if avatar != empty %}
+      {% assign avatar_prefix = avatar | slice: 0, 1 %}
+      {% unless avatar contains '://' or avatar_prefix == '/' %}
+        {% assign avatar = avatar | prepend: '/images/' %}
+      {% endunless %}
+      <img class="academic-profile__avatar" src="{{ avatar | escape }}" alt="{{ author.name | escape }}" width="156" height="156">
+    {% else %}
+      <div class="academic-profile__avatar academic-profile__avatar--blank" aria-hidden="true"><i class="fas fa-user"></i></div>
     {% endif %}
-    <h1>{{ author.name | default: page.title | escape }}</h1>
-    {% if author.bio and author.bio != empty %}<p class="profile-home__bio">{{ author.bio | escape }}</p>{% endif %}
-    {% if author.employer or author.location or author.email or author.github %}
-      <ul class="profile-home__details">
-        {% if author.employer and author.employer != empty %}<li>{{ author.employer | escape }}</li>{% endif %}
-        {% if author.location and author.location != empty %}<li>{{ author.location | escape }}</li>{% endif %}
-        {% if author.email and author.email != empty %}<li><a href="mailto:{{ author.email | escape }}">{{ author.email | escape }}</a></li>{% endif %}
-        {% if author.github and author.github != empty %}<li><a href="https://github.com/{{ author.github | escape }}">GitHub</a></li>{% endif %}
+    <div class="academic-profile__identity">
+      <h1>{{ author.name | default: page.title | escape }}</h1>
+      {% if author.employer and author.employer != empty %}<p class="academic-profile__affiliation">{{ author.employer | escape }}</p>{% endif %}
+      {% if author.bio and author.bio != empty %}<p class="academic-profile__bio">{{ author.bio | escape }}</p>{% endif %}
+    </div>
+    {% assign contacts = author.location | append: author.email | append: author.github | append: author.googlescholar | append: author.orcid | strip %}
+    {% if contacts != empty %}
+      <ul class="academic-profile__links">
+        {% if author.location and author.location != empty %}<li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>{{ author.location | escape }}</li>{% endif %}
+        {% if author.email and author.email != empty %}<li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:{{ author.email | escape }}">{{ author.email | escape }}</a></li>{% endif %}
+        {% if author.github and author.github != empty %}<li><i class="fab fa-github" aria-hidden="true"></i><a href="https://github.com/{{ author.github | url_encode }}">GitHub</a></li>{% endif %}
+        {% if author.googlescholar and author.googlescholar != empty %}<li><i class="fas fa-graduation-cap" aria-hidden="true"></i><a href="{{ author.googlescholar | escape }}">Google Scholar</a></li>{% endif %}
+        {% if author.orcid and author.orcid != empty %}<li><i class="fab fa-orcid" aria-hidden="true"></i><a href="{{ author.orcid | escape }}">ORCID</a></li>{% endif %}
       </ul>
     {% endif %}
-    <a class="btn btn--primary" href="{{ site.blog_url | default: '/blog/' | escape }}">访问博客</a>
-  </header>
-  {% assign about = content | strip %}
-  {% unless about == empty %}
-    <section class="profile-home__body" aria-label="个人介绍">{{ content }}</section>
-  {% endunless %}
+    <a class="academic-profile__blog" href="{{ site.blog_url | default: '/blog/' | escape }}">Blog</a>
+  </aside>
+
+  <div class="academic-home__content">
+    <section class="academic-section" id="about-me" aria-labelledby="about-me-title">
+      <h2 id="about-me-title">About Me</h2>
+      {% assign about = content | strip %}
+      {% if about != empty %}<div class="academic-section__text">{{ content }}</div>{% endif %}
+    </section>
+
+    {% for link in site.data.navigation.main %}
+      {% if link.section %}
+        {% assign id = link.url | split: '#' | last %}
+        {% assign entries = site.data.home_sections[link.section] %}
+        <section class="academic-section academic-section--{{ link.section }}" id="{{ id }}" aria-labelledby="{{ id }}-title">
+          <h2 id="{{ id }}-title"><i class="fas {{ link.icon }}" aria-hidden="true"></i>{{ link.title }}</h2>
+          {% if entries and entries.size > 0 %}
+            <ul class="academic-section__entries">
+              {% for entry in entries %}
+                <li class="academic-entry{% if entry.image and entry.image != empty %} academic-entry--image{% endif %}">
+                  {% if entry.image and entry.image != empty %}
+                    <img class="academic-entry__image" src="{{ entry.image | escape }}" alt="" loading="lazy">
+                  {% endif %}
+                  <div class="academic-entry__body">
+                    <div class="academic-entry__heading">
+                      {% if entry.label and entry.label != empty %}<span class="academic-entry__label">{{ entry.label | escape }}</span>{% endif %}
+                      {% if entry.date and entry.date != empty %}<span class="academic-entry__date">{{ entry.date | escape }}</span>{% endif %}
+                      <h3>
+                        {% if entry.url and entry.url != empty %}<a href="{{ entry.url | escape }}">{{ entry.title | escape }}</a>{% else %}{{ entry.title | escape }}{% endif %}
+                      </h3>
+                    </div>
+                    {% if entry.detail and entry.detail != empty %}<div class="academic-entry__detail">{{ entry.detail | markdownify }}</div>{% endif %}
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
 </main>

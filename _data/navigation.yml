@@ -1,3 +1,29 @@
 main:
+  - title: About Me
+    url: /#about-me
+  - title: News
+    url: /#news
+    section: news
+    icon: fa-bullhorn
+  - title: Experience
+    url: /#experience
+    section: experience
+    icon: fa-briefcase
+  - title: Selected Publications
+    url: /#selected-publications
+    section: publications
+    icon: fa-file-lines
+  - title: Research Grants
+    url: /#research-grants
+    section: grants
+    icon: fa-award
+  - title: Education
+    url: /#education
+    section: education
+    icon: fa-graduation-cap
+  - title: Teaching
+    url: /#teaching
+    section: teaching
+    icon: fa-chalkboard-teacher
   - title: Blog
     url: /blog/
